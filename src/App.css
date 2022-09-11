@@ -38,11 +38,12 @@ img {
 
 .container{
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content:space-evenly
 }
 
 .formContainer {
+  font-family: 'Audiowide',cursive;
   display: flex;
   flex-direction: column;
   justify-content:baseline;
@@ -50,10 +51,33 @@ img {
   justify-self:flex-end;
   margin-left: 10px;
   width: 200px;
-  
 }
 
-.table{
+input[type=text]{  
+  text-align: center;
+  /* font-size: 18px; */
+}
+
+.form {
+border: solid grey 1px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 30em;
+  min-height: 100%;
+  width: 1120px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 1rem;
+  align-content: center;
+  /* border-collapse: collapse; */
+}
+
+table {
   /* background-color: #282c34; */
   border: solid grey 1px;
   border-radius: 5px;
@@ -62,39 +86,43 @@ img {
   display: flex;
   flex-direction: column;
   height: 30em;
-  width: 1000px;
+  width: 1120px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 3px;
   padding: 1rem;
   align-content: center;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
 }
 
 th,
 td {
- 
+  /* font-family: 'Audiowide',cursive; */
   border: 1px solid #ffffff;
   text-align: center;
+  align-content: center;
   padding: 8px;
   font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 th {
+  display: flex;
+  justify-content: center;
   background-color: rgb(117, 201, 250);
   border-radius: 5px;
-  padding: 5px 10px 5px 10px;
+  min-width: 162px;
 }
 
 td {
+  display: flex;
+  justify-content: center;
   background-color: rgb(205, 235, 253);
   border-radius: 5px;
-}
-
-form {
-  display: flex;
-  gap: 5px;
+  min-width: 162px;
 }
 
 form td:last-child {
@@ -114,4 +142,42 @@ form * {
   align-self: center;
   align-items: center;
   width: 100px;
+}
+
+.actions{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+thead{
+  display: flex;
+  flex-direction: row;
+  min-width: 900px;
+}
+
+tbody{
+  display: flex;
+  flex-direction: column;
+  min-width: 900px;
+}
+
+tr {
+  display: flex;
+  flex-direction: row;
+  min-width: 900px;
+}
+
+.button{
+  min-width: 80px
+}
+
+#edit{
+  background-color: rgb(4, 144, 4);
+  color: white;
+}
+
+button[color=red] {
+background-color: rgb(230, 73, 73);
+color: white;
 }

@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import ShowPortfolio from "./components/ShowPortfolio.js";
 import Header from "./components/Header.js";
-// import Form from "./components/Form.js";
+import Form from "./components/Form.js";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <div className="container">
         <ShowPortfolio />
-        {/* <Form /> */}
+        <Form />
       </div>
     </div>
   );
