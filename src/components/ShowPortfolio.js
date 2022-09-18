@@ -28,7 +28,7 @@ function ShowPortfolio() {
       .then((data) => {
         setInvestments(data);
       });
-  }, [tokens]);
+  }, [tokens, editFormData]);
 
   const deleteBtn = (event) => {
     event.preventDefault();
@@ -74,9 +74,6 @@ function ShowPortfolio() {
         `http://localhost:3000/api/crypto/${editInvestmentId}`,
         editedInvestment
       )
-      .then((res) => {
-        alert("update");
-      })
       .then((resp) => {
         const newInvestments = [...investments];
         const index = investments.findIndex(
@@ -102,7 +99,6 @@ function ShowPortfolio() {
     };
 
     setEditFormData(formValues);
-    console.log(formValues);
   };
   // Good
   const handleCancelClick = () => {
