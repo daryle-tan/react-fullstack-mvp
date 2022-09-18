@@ -5,7 +5,7 @@ CREATE TABLE crypto (
     name TEXT,
     amount_invested MONEY,
     price_at_purchase MONEY,
-    date_purchased DATE,
+    date_purchased TEXT,
     tokens_owned NUMERIC
 );
 

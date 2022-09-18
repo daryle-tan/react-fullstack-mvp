@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Libre+Barcode+39&family=Rubik+Maze&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Libre+Barcode+39&family=Rubik+Maze&display=swap");
 
 .App {
   display: flex;
@@ -9,7 +9,7 @@
   background-color: #282c34;
   min-height: 20vh;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -18,7 +18,7 @@
 }
 
 h1 {
-  font-family: 'Audiowide',cursive;
+  font-family: "Audiowide", cursive;
   font-size: 50px;
   margin-right: 300px;
   margin-left: 450px;
@@ -36,30 +36,30 @@ img {
   margin-left: 30px;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: row;
-  justify-content:space-evenly
+  justify-content: space-evenly;
 }
 
 .formContainer {
-  font-family: 'Audiowide',cursive;
+  font-family: "Audiowide", cursive;
   display: flex;
   flex-direction: column;
-  justify-content:baseline;
-  align-content:flex-end;
-  justify-self:flex-end;
+  justify-content: baseline;
+  align-content: flex-end;
+  justify-self: flex-end;
   margin-left: 10px;
   width: 200px;
 }
 
-input[type=text]{  
+input[type="text"] {
   text-align: center;
   /* font-size: 18px; */
 }
 
 .form {
-border: solid grey 1px;
+  border: solid grey 1px;
   border-radius: 5px;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -74,26 +74,6 @@ border: solid grey 1px;
   gap: 3px;
   padding: 1rem;
   align-content: center;
-  /* border-collapse: collapse; */
-}
-
-table {
-  /* background-color: #282c34; */
-  border: solid grey 1px;
-  border-radius: 5px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  height: 30em;
-  width: 1120px;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 1rem;
-  align-content: center;
-  /* border-collapse: collapse; */
 }
 
 th,
@@ -122,7 +102,7 @@ td {
   justify-content: center;
   background-color: rgb(205, 235, 253);
   border-radius: 5px;
-  min-width: 162px;
+  width: 160px;
 }
 
 form td:last-child {
@@ -131,10 +111,10 @@ form td:last-child {
 }
 
 form * {
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   gap: 5px;
 }
 
@@ -142,21 +122,23 @@ form * {
   align-self: center;
   align-items: center;
   width: 100px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-.actions{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-thead{
+thead {
   display: flex;
   flex-direction: row;
   min-width: 900px;
 }
 
-tbody{
+tbody {
   display: flex;
   flex-direction: column;
   min-width: 900px;
@@ -168,16 +150,26 @@ tr {
   min-width: 900px;
 }
 
-.button{
-  min-width: 80px
+.button {
+  min-width: 80px;
 }
 
-#edit{
-  background-color: rgb(4, 144, 4);
+#edit {
+  background-color: rgb(33, 143, 99);
   color: white;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-button[color=red] {
-background-color: rgb(230, 73, 73);
-color: white;
+button[color="red"] {
+  background-color: rgb(230, 73, 73);
+  color: white;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[name="edit"] {
+  width: 95%;
 }

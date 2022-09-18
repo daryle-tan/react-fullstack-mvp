@@ -1,6 +1,13 @@
 import React from "react";
+// import { tokenState } from "./state.js";
+// import { useRecoilState } from "recoil";
 
-export const Edit = (editFormData, handleEditFormChange) => {
+export const Edit = ({
+  editFormData,
+  handleEditFormChange,
+  handleCancelClick,
+  setEditFormData,
+}) => {
   return (
     <tr>
       <td>
@@ -9,7 +16,7 @@ export const Edit = (editFormData, handleEditFormChange) => {
           required="required"
           placeholder="name"
           name="name"
-          // onChange={handleEditFormChange}
+          onChange={handleEditFormChange}
           value={editFormData.name}
         />
       </td>
@@ -18,8 +25,8 @@ export const Edit = (editFormData, handleEditFormChange) => {
           type="text"
           required="required"
           placeholder="amount-invested"
-          name="amount-invested"
-          // onChange={handleEditFormChange}
+          name="amount_invested"
+          onChange={handleEditFormChange}
           value={editFormData.amount_invested}
         />
       </td>
@@ -28,8 +35,8 @@ export const Edit = (editFormData, handleEditFormChange) => {
           type="text"
           required="required"
           placeholder="price-at-purchase"
-          name="price-at-purchase"
-          // onChange={handleEditFormChange}
+          name="price_at_purchase"
+          onChange={handleEditFormChange}
           value={editFormData.price_at_purchase}
         />
       </td>
@@ -38,8 +45,8 @@ export const Edit = (editFormData, handleEditFormChange) => {
           type="text"
           required="required"
           placeholder="token-amount"
-          name="token-amount"
-          // onChange={handleEditFormChange}
+          name="tokens_owned"
+          onChange={handleEditFormChange}
           value={editFormData.tokens_owned}
         />
       </td>
@@ -48,16 +55,16 @@ export const Edit = (editFormData, handleEditFormChange) => {
           type="text"
           required="required"
           placeholder="date-of-purchase"
-          name="date-of-purchase"
-          // onChange={handleEditFormChange}
-          value={editFormData.date_of_purchase}
+          name="date_purchased"
+          onChange={handleEditFormChange}
+          value={editFormData.date_purchased}
         />
       </td>
       <td className="actions">
         <button type="submit" className="button">
           Save
         </button>
-        <button type="button" className="button">
+        <button type="button" className="button" onClick={handleCancelClick}>
           Cancel
         </button>
       </td>
