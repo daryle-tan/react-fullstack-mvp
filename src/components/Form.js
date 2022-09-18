@@ -62,7 +62,7 @@ function Form() {
             className="crypto"
             onChange={updateName}
             required="required"
-            placeholder="TokenName"
+            placeholder="Name"
           />
           <input
             name="usdInvested"

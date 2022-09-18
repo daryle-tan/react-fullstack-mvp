@@ -39,7 +39,7 @@ app.get("/api/crypto/:id", (req, res, next) => {
 
 app.post("/api/crypto", (req, res, next) => {
   const name = req.body.name;
-  const amount_invested = req.body.price_at_purchase;
+  const amount_invested = req.body.amount_invested;
   const price_at_purchase = req.body.price_at_purchase;
   const date_purchased = req.body.date_purchased;
   const tokens_owned = req.body.tokens_owned;
@@ -52,6 +52,38 @@ app.post("/api/crypto", (req, res, next) => {
     .then((response) => {
       if (req.body) {
         res.send(response);
+      } else {
+        res.sendStatus(400);
+      }
+    })
+    .catch(next);
+});
+
+app.patch("/api/crypto/:id", (req, res, next) => {
+  const index = req.params.id;
+  const body = req.body;
+  pool
+    .query(
+      `UPDATE crypto SET name = COALESCE($1, name),
+              amount_invested = COALESCE($2, amount_invested),
+            price_at_purchase = COALESCE($3, price_at_purchase),
+                 tokens_owned = COALESCE($4, tokens_owned), 
+               date_purchased = COALESCE($5, date_purchased)
+                     WHERE id = COALESCE($6, id) 
+                     RETURNING *;`,
+      [
+        body.name,
+        body.amount_invested,
+        body.price_at_purchase,
+        body.tokens_owned,
+        body.date_purchased,
+        index,
+      ]
+    )
+    .then((data) => {
+      if (body.name) {
+        console.log(data);
+        res.send(data.rows[0]);
       } else {
         res.sendStatus(400);
       }
