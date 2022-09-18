@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { tokensState } from "./state.js";
 import { useRecoilState } from "recoil";
-// import ShowPortfolio, { tokens, setTokens } from "./ShowPortfolio.js";
-// import { tokens, setTokens } from "./ShowPortfolio.js";
 
 function Form() {
   const [name, setName] = useState("");
@@ -106,32 +104,3 @@ function Form() {
 }
 
 export default Form;
-
-// // fetch("http://localhost:3000/api/crypto", {
-// //   mode: "cors",
-// //   method: "POST",
-// //   headers: {
-// //     "Content-Type": "application.json",
-// //   },
-// //   body: JSON.stringify({ name }),
-// // })
-// //   .then((response) => response.json())
-// //   .then((token) => {
-// //     console.log("after post request", token);
-// //     setToken([...tokens, token]);
-// //   });
-
-// axios({
-//   url: "http://localhost:3000/api/crypto",
-//   method: "Post",
-//   data: {
-//     name,
-//     amount_invested,
-//     price_at_purchase,
-//     date_purchased,
-//     tokens_owned,
-//   },
-// }).then((res) => {
-//   setCoins([...coins, res.data]);
-// });
-// console.log("handlesubmit");

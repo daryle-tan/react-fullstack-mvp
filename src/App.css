@@ -105,6 +105,10 @@ td {
   width: 160px;
 }
 
+.editInput {
+  width: 160px;
+}
+
 form td:last-child {
   display: flex;
   justify-content: space-evenly;
@@ -172,4 +176,22 @@ button[color="red"] {
 
 input[name="edit"] {
   width: 95%;
+}
+
+.saveBtn {
+  background-color: rgb(56, 168, 233);
+  color: white;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.cancelBtn {
+  background-color: orange;
+  color: white;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 80px;
 }

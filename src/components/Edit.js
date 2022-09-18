@@ -4,12 +4,12 @@ export const Edit = ({
   editFormData,
   handleEditFormChange,
   handleCancelClick,
-  setEditFormData,
 }) => {
   return (
     <tr>
       <td>
         <input
+          className="editInput"
           type="text"
           required="required"
           placeholder="name"
@@ -20,6 +20,7 @@ export const Edit = ({
       </td>
       <td>
         <input
+          className="editInput"
           type="text"
           required="required"
           placeholder="amount-invested"
@@ -30,6 +31,7 @@ export const Edit = ({
       </td>
       <td>
         <input
+          className="editInput"
           type="text"
           required="required"
           placeholder="price-at-purchase"
@@ -40,6 +42,7 @@ export const Edit = ({
       </td>
       <td>
         <input
+          className="editInput"
           type="text"
           required="required"
           placeholder="token-amount"
@@ -50,6 +53,7 @@ export const Edit = ({
       </td>
       <td>
         <input
+          className="editInput"
           type="text"
           required="required"
           placeholder="date-of-purchase"
@@ -59,10 +63,10 @@ export const Edit = ({
         />
       </td>
       <td className="actions">
-        <button type="submit" className="button">
+        <button type="submit" className="saveBtn">
           Save
         </button>
-        <button type="button" className="button" onClick={handleCancelClick}>
+        <button type="button" className="cancelBtn" onClick={handleCancelClick}>
           Cancel
         </button>
       </td>
