@@ -1,8 +1,6 @@
 import React from "react";
 
 const ReadOnly = ({ investment, deleteBtn, handleEditClick }) => {
-  // let date = investment.date_purchased;
-  // console.log(date.format("MM/dd/yyyy"));
   return (
     <tr key={investment.id}>
       <td key="name" value={investment.name}>
