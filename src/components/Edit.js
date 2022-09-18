@@ -1,6 +1,4 @@
 import React from "react";
-// import { tokenState } from "./state.js";
-// import { useRecoilState } from "recoil";
 
 export const Edit = ({
   editFormData,
@@ -71,16 +69,3 @@ export const Edit = ({
     </tr>
   );
 };
-
-// event.preventDefault();
-// fetch(`http://localhost:3000/api/crypto/${id}`, {
-//   method: "PATCH",
-//   headers: {
-//     "Content-Type": "application/json",
-//   },
-//   body: JSON.stringify(editFormData),
-// })
-//   .then((resp) => resp.json())
-//   .then((editFormData) => {
-//     handleEditFormChange(editFormData);
-//   });

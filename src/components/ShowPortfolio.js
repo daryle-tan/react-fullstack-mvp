@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Fragment } from "react";
-// import Form from "./Form.js";
 import { tokensState } from "./state.js";
 import { useRecoilState } from "recoil";
 import ReadOnly from "./ReadOnly.js";
@@ -9,13 +8,8 @@ import axios from "axios";
 function ShowPortfolio() {
   const [investments, setInvestments] = useState([]);
   const [tokens, setTokens] = useRecoilState(tokensState);
-  // const [name, setName] = useState("");
-  // const [amount_invested, setAmountInvested] = useState("");
-  // const [price_at_purchase, setPriceAtPurchase] = useState("");
-  // const [date_purchased, setDatePurchased] = useState("");
-  // const [tokens_owned, setTokensOwned] = useState("");
-  const [editInvestmentId, setEditInvestmentId] = useState(null);
 
+  const [editInvestmentId, setEditInvestmentId] = useState(null);
   const [editFormData, setEditFormData] = useState({
     name: "",
     amount_invested: "",
@@ -23,7 +17,6 @@ function ShowPortfolio() {
     date_purchased: "",
     tokens_owned: "",
   });
-  console.log(editFormData);
 
   useEffect(() => {
     fetch("http://localhost:3000/api/crypto", {
@@ -34,7 +27,6 @@ function ShowPortfolio() {
       })
       .then((data) => {
         setInvestments(data);
-        // console.log(data);
       });
   }, [tokens]);
 
@@ -93,11 +85,8 @@ function ShowPortfolio() {
         newInvestments[index] = editedInvestment;
 
         setInvestments(newInvestments);
-        // setInvestments({ id: 0 });
-        // setTokens({ tokensState });
         setEditInvestmentId(null);
-      })
-      .catch(console.error("here"));
+      });
   };
 
   const handleEditClick = (event, investment) => {
@@ -165,46 +154,3 @@ function ShowPortfolio() {
 }
 
 export default ShowPortfolio;
-
-// <table key="name">
-// <tbody>
-// <tr key={investment.id}>
-//   <td key="name" value={investment.name}>
-//     {investment.name}
-//   </td>
-//   <td key="amountInvested" value={investment.amount_invested}>
-//     {investment.amount_invested}
-//   </td>
-//   <td
-//     key="priceAtPurchase"
-//     value={investment.price_at_purchase}
-//   >
-//     {investment.price_at_purchase}
-//   </td>
-//   <td key="amount" value={investment.tokens_owned}>
-//     {investment.tokens_owned}
-//   </td>
-//   <td key="datePurchased" value={investment.date_purchased}>
-//     {investment.date_purchased}
-//   </td>
-//   <td>
-//     <button
-//       id={investment.id}
-//       onClick={deleteBtn}
-//       className="deleteBtn"
-//     >
-//       Delete
-//     </button>
-//   </td>
-// </tr>
-// </tbody>
-// </table>
-
-// axios
-//       .patch(`http://localhost:3000/api/crypto/${id}`, editFormData)
-//       // .then((resp) => resp.json())
-//       // // .then((data) => console.log(data))
-//       .then((res) => {
-//         console.log(res);
-//         // handleEditFormChange(editFormData);
-//         // console.log(editFormData);
