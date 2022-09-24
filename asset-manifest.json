@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "//daryletan.github.io/react-fullstack-mvp/static/css/main.7842788b.css",
-    "main.js": "//daryletan.github.io/react-fullstack-mvp/static/js/main.29e9550b.js",
-    "index.html": "//daryletan.github.io/react-fullstack-mvp/index.html",
-    "main.7842788b.css.map": "//daryletan.github.io/react-fullstack-mvp/static/css/main.7842788b.css.map",
-    "main.29e9550b.js.map": "//daryletan.github.io/react-fullstack-mvp/static/js/main.29e9550b.js.map"
+    "main.css": "/react-fullstack-mvp/static/css/main.7842788b.css",
+    "main.js": "/react-fullstack-mvp/static/js/main.29e9550b.js",
+    "index.html": "/react-fullstack-mvp/index.html",
+    "main.7842788b.css.map": "/react-fullstack-mvp/static/css/main.7842788b.css.map",
+    "main.29e9550b.js.map": "/react-fullstack-mvp/static/js/main.29e9550b.js.map"
   },
   "entrypoints": [
     "static/css/main.7842788b.css",
