@@ -12,10 +12,6 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static("public"));
 
-// const pool = new pg.Pool({
-//   database: "mvpcrypto",
-// });
-
 const pool = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
   ...(process.env.NODE_ENV === "production"
