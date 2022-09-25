@@ -13,6 +13,7 @@
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "jotai": "^1.8.1",
+    "netlify-cli": "^11.8.3",
     "node": "^18.9.1",
     "nodemon": "^2.0.19",
     "pg": "^8.8.0",
@@ -22,10 +23,11 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "recoil": "^0.7.5",
+    "serve": "^14.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "netlify dev",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
