@@ -21,6 +21,9 @@ function ShowPortfolio() {
   useEffect(() => {
     fetch("https://crypto-tracker-5xpa.onrender.com", {
       mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
       .then((response) => {
         return response.json();
@@ -36,6 +39,9 @@ function ShowPortfolio() {
     console.log(id);
     fetch(`https://crypto-tracker-5xpa.onrender.com/${id}`, {
       method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
     }).then(() => {
       setInvestments({ id: 0 });
       setTokens({ tokensState });
