@@ -36,7 +36,7 @@ function Form() {
     event.preventDefault();
 
     axios({
-      url: "http://localhost:10000/api/crypto",
+      url: "/api/crypto",
       method: "Post",
       data: {
         name,

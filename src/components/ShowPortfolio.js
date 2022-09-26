@@ -19,7 +19,7 @@ function ShowPortfolio() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:10000/api/crypto", {
+    fetch("/api/crypto", {
       mode: "cors",
     })
       .then((response) => {
@@ -34,7 +34,7 @@ function ShowPortfolio() {
     event.preventDefault();
     let id = event.currentTarget.id;
     console.log(id);
-    fetch(`http://localhost:10000/api/crypto/${id}`, {
+    fetch(`/api/crypto/${id}`, {
       method: "DELETE",
     }).then(() => {
       setInvestments({ id: 0 });
@@ -70,10 +70,7 @@ function ShowPortfolio() {
     };
 
     axios
-      .patch(
-        `http://localhost:10000/api/crypto/${editInvestmentId}`,
-        editedInvestment
-      )
+      .patch(`/api/crypto/${editInvestmentId}`, editedInvestment)
       .then((resp) => {
         const newInvestments = [...investments];
         const index = investments.findIndex(
