@@ -19,7 +19,7 @@ function ShowPortfolio() {
   });
 
   useEffect(() => {
-    fetch("https://crypto-tracker-5xpa.onrender.com", {
+    fetch("https://crypto-tracker-5xpa.onrender.com/api/crypto", {
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ function ShowPortfolio() {
     event.preventDefault();
     let id = event.currentTarget.id;
     console.log(id);
-    fetch(`https://crypto-tracker-5xpa.onrender.com/${id}`, {
+    fetch(`https://crypto-tracker-5xpa.onrender.com//api/crypto/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -77,7 +77,7 @@ function ShowPortfolio() {
 
     axios
       .patch(
-        `https://crypto-tracker-5xpa.onrender.com/${editInvestmentId}`,
+        `https://crypto-tracker-5xpa.onrender.com/api/crypto/${editInvestmentId}`,
         editedInvestment
       )
       .then((resp) => {
