@@ -29,19 +29,11 @@ app.get("/api/crypto", async (req, res, next) => {
   res.send(crypto);
 });
 
-app.get("/api/crypto/:id", async (req, res, next) => {
-  const id = req.params.id;
-  pool
-    .query("SELECT * FROM crypto WHERE id = $1;", [id])
-    .then((response) => {
-      const asset = data.rows[0];
-      if (asset) {
-        res.send(asset);
-      } else {
-        res.sendStatus(404);
-      }
-    })
-    .catch(next);
+app.get("/api/crypto/:id", async (req, res) => {
+  const { id } = req.params;
+  const checkId = await sql`SELECT * FROM crypto WHERE id = ${id}`;
+  console.log(checkId);
+  res.send(checkId[0]);
 });
 
 app.post("/api/crypto", (req, res, next) => {
