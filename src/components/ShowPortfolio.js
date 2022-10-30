@@ -19,8 +19,11 @@ function ShowPortfolio() {
   });
 
   useEffect(() => {
-    fetch("https://crypto-tracker-5xpa.onrender.com/api/crypto", {
+    fetch("http://localhost:3000/api/crypto", {
       mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
       .then((response) => {
         return response.json();
@@ -34,8 +37,11 @@ function ShowPortfolio() {
     event.preventDefault();
     let id = event.currentTarget.id;
     console.log(id);
-    fetch(`https://crypto-tracker-5xpa.onrender.com//api/crypto/${id}`, {
+    fetch(`http://localhost:3000/api/crypto/${id}`, {
       method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
     }).then(() => {
       setInvestments({ id: 0 });
       setTokens({ tokensState });
@@ -70,10 +76,7 @@ function ShowPortfolio() {
     };
 
     axios
-      .patch(
-        `https://crypto-tracker-5xpa.onrender.com/api/crypto/${editInvestmentId}`,
-        editedInvestment
-      )
+      .patch(`localhost:3000/api/crypto${editInvestmentId}`, editedInvestment)
       .then((resp) => {
         const newInvestments = [...investments];
         const index = investments.findIndex(
@@ -85,7 +88,7 @@ function ShowPortfolio() {
         setEditInvestmentId(null);
       });
   };
-
+  // makes data editable
   const handleEditClick = (event, investment) => {
     event.preventDefault();
     setEditInvestmentId(investment.id);

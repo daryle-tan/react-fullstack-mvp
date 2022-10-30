@@ -9,7 +9,6 @@ function Form() {
   const [price_at_purchase, setPriceAtPurchase] = useState("");
   const [date_purchased, setDatePurchased] = useState("");
   const [tokens_owned, setTokensOwned] = useState("");
-  // eslint - disable - next - line;
   const [coins, setCoins] = useRecoilState(tokensState);
 
   const updateTokensOwned = (event) => {
@@ -36,7 +35,7 @@ function Form() {
     event.preventDefault();
 
     axios({
-      url: "/api/crypto",
+      url: "http://localhost:3000/api/crypto",
       method: "Post",
       data: {
         name,
