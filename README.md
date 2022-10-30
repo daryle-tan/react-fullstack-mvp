@@ -1,3 +1,5 @@
+[![Crypto Tracker](http://img.youtube.com/vi/3JYTUwBlrTI/0.jpg)](https://youtu.be/3JYTUwBlrTI)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
